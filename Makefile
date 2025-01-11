@@ -1,6 +1,8 @@
 TEST_CONTAINER="drf-bulk-destroy-container"
 IMAGE_NAME="drf-bulk-destroy-local"
 
+all: build run
+
 build:
 	docker build -t ${IMAGE_NAME} .
 

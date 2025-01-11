@@ -8,8 +8,8 @@ class CustomAPIRouter(DefaultRouter):
         super().__init__(*args, **kwargs)
 
         # by DRF definition, this might be subject to change to version of DRF
-        list_router = self.routes[0]
-        list_router.mapping.update({
+        list_route = self.routes[0]
+        list_route.mapping.update({
             "delete": "bulk_destroy"
         })
 
